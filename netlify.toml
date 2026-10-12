@@ -1,0 +1,22 @@
+# Sitio estático puro (HTML + CSS): sin build command.
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Caché inmutable: si cambia un archivo, subir el ?v=N en index.html
+# (o renombrar el archivo, p. ej. main.v2.css) para forzar la descarga.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

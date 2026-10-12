@@ -1,0 +1,66 @@
+@layer components {
+  .promo {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 20.9375rem; /* 335 px */
+    padding-block: var(--space-56);
+    overflow: hidden;
+    background-color: var(--color-sand);
+  }
+
+  .promo__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+    gap: var(--space-24);
+    text-align: center;
+  }
+
+  .promo__title {
+    max-width: 23.25rem; /* 372 px */
+    font-family: var(--font-display);
+    font-size: var(--fs-cta);
+    font-weight: 600;
+    line-height: var(--lh-cta);
+    color: var(--color-black);
+  }
+
+  /* Imágenes decorativas: ocultas en mobile */
+  .promo__img {
+    display: none;
+    position: absolute;
+    inset-block: 0;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .promo__img--hand {
+    inset-inline-start: 0;
+    width: min(32.5rem, 22vw); /* 520 px */
+    object-position: right center;
+  }
+
+  .promo__img--beans {
+    inset-inline-end: 0;
+    width: min(31.4375rem, 26vw); /* 503 px */
+    object-position: left center;
+  }
+
+  @media (min-width: 768px) {
+    .promo__img--hand {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .promo__img--beans {
+      display: block;
+    }
+
+    .promo__img--hand {
+      width: min(32.5rem, 27vw);
+    }
+  }
+}

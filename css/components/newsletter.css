@@ -1,0 +1,111 @@
+@layer components {
+  .newsletter {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 20rem; /* 320 px */
+    padding-block: var(--space-56);
+    overflow: hidden;
+    background-color: var(--color-sand);
+    color: var(--color-espresso);
+  }
+
+  .newsletter__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    justify-items: center;
+    gap: var(--space-8);
+    text-align: center;
+  }
+
+  .newsletter__title {
+    font-family: var(--font-ui);
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .newsletter__subtitle {
+    font-family: var(--font-ui);
+    font-size: var(--fs-base);
+    font-weight: 500;
+  }
+
+  .newsletter__form {
+    display: grid;
+    gap: var(--space-12);
+    width: 100%;
+    max-width: 38rem;
+    margin-block-start: var(--space-16);
+  }
+
+  .newsletter__field {
+    min-width: 0;
+    height: 2.75rem; /* 44 px */
+    padding-inline: 3rem var(--space-16);
+    border: 2px solid transparent;
+    border-radius: var(--radius-pill);
+    background: var(--color-bg) url("../../assets/icons/mail.svg") 1rem center / 1.5rem no-repeat;
+    color: var(--color-espresso);
+    font-family: var(--font-ui);
+    font-size: var(--fs-base);
+    font-weight: 500;
+  }
+
+  .newsletter__field::placeholder {
+    color: var(--color-espresso);
+    opacity: 1;
+    font-weight: 500;
+  }
+
+  /* Validación nativa: borde de error cuando el valor es inválido
+     (equivalente a :user-invalid con soporte desde Safari 15) */
+  .newsletter__field:invalid:not(:placeholder-shown) {
+    border-color: var(--color-error);
+  }
+
+  .newsletter__submit {
+    font-family: var(--font-ui);
+    font-weight: 500;
+  }
+
+  .newsletter__img {
+    display: none;
+    position: absolute;
+    inset-block: 0;
+    width: auto;
+    height: 100%;
+    max-width: 26vw;
+    object-fit: cover;
+  }
+
+  .newsletter__img--left {
+    inset-inline-start: 0;
+    object-position: right center;
+  }
+
+  .newsletter__img--right {
+    inset-inline-end: 0;
+    object-position: right center;
+    transform: scaleX(-1);
+  }
+
+  @media (min-width: 768px) {
+    .newsletter__form {
+      grid-template-columns: 1fr auto;
+      width: auto;
+      max-width: none;
+    }
+
+    .newsletter__field {
+      width: min(22.75rem, 100%); /* 364 px */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .newsletter__img {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+@layer components {
+  .header {
+    --focus-color: var(--color-white);
+    position: absolute;
+    inset: var(--space-16) 0 auto;
+    z-index: 10;
+    color: var(--color-white);
+  }
+
+  .header__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+  }
+
+  .header__logo {
+    margin-inline-end: auto;
+    font-family: var(--font-display);
+    font-size: var(--fs-logo);
+    font-weight: 700;
+    line-height: 1;
+    text-transform: lowercase;
+  }
+
+  /* Menú mobile: checkbox + label (CSS-only). Orden DOM = orden visual. */
+  .header__nav {
+    display: none;
+    position: absolute;
+    inset: calc(100% + var(--space-12)) 0 auto;
+    padding: var(--space-16);
+    border-radius: var(--radius-card);
+    background-color: var(--color-espresso);
+  }
+
+  .header:has(.header__toggle:checked) .header__nav {
+    display: block;
+  }
+
+  .header__list {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .header__link {
+    display: flex;
+    align-items: center;
+    min-height: var(--tap);
+    padding-inline: var(--space-12);
+    border-radius: var(--radius-btn);
+    font-family: var(--font-ui);
+    font-size: var(--fs-md);
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .header__link--strong {
+    font-weight: 600;
+  }
+
+  .header__search {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: var(--tap);
+    height: var(--tap);
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: transform var(--transition);
+  }
+
+  .header__search img {
+    width: 45%;
+    height: 45%;
+  }
+
+  .header__toggle {
+    position: absolute;
+    inset-inline-end: 0;
+    width: var(--tap);
+    height: var(--tap);
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .header__burger {
+    position: relative;
+    flex: none;
+    width: var(--tap);
+    height: var(--tap);
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    pointer-events: none;
+  }
+
+  .header__burger::before,
+  .header__burger::after,
+  .header__burger-bar {
+    content: "";
+    position: absolute;
+    inset-inline: 30%;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background-color: var(--color-white);
+  }
+
+  .header__burger::before {
+    inset-block-start: 32%;
+  }
+
+  .header__burger-bar {
+    inset-block-start: calc(50% - 1px);
+  }
+
+  .header__burger::after {
+    inset-block-end: 32%;
+  }
+
+  .header__toggle:focus-visible + .header__burger {
+    outline: 2px solid var(--focus-color);
+    outline-offset: 3px;
+  }
+
+  /* Variante sólida (404): el header no va sobre una imagen */
+  .header--solid {
+    position: relative;
+    inset: auto;
+    padding-block: var(--space-16);
+    background-color: var(--color-espresso);
+  }
+
+  @media (hover: hover) {
+    .header__link:hover {
+      background-color: var(--color-sand-20);
+    }
+
+    .header__search:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .header {
+      inset-block-start: 3.4375rem; /* 55 px */
+    }
+
+    .header--solid {
+      padding-block: var(--space-24);
+    }
+
+    .header__logo {
+      margin-inline-end: 0;
+    }
+
+    .header__inner {
+      justify-content: space-between;
+    }
+
+    .header__nav {
+      display: block;
+      position: static;
+      padding: 0;
+      background: none;
+    }
+
+    .header__list {
+      grid-auto-flow: column;
+      gap: var(--space-40);
+    }
+
+    .header__link {
+      min-height: 0;
+      padding: var(--space-4) 0;
+      border-radius: 0;
+      background: none;
+      border-block-end: 2px solid transparent;
+    }
+
+    .header__search {
+      width: 3.8125rem; /* 61 px */
+      height: 3.8125rem;
+    }
+
+    .header__toggle,
+    .header__burger {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1024px) and (hover: hover) {
+    .header__link:hover {
+      border-block-end-color: var(--color-white);
+    }
+  }
+}
