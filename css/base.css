@@ -54,12 +54,6 @@
     cursor: pointer;
   }
 
-  h1,
-  h2,
-  h3 {
-    text-wrap: balance;
-  }
-
   /* Foco visible obligatorio en todo elemento interactivo.
      Sobre fondos oscuros, el contexto redefine --focus-color a blanco. */
   :focus-visible {

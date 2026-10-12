@@ -144,16 +144,20 @@
 
   .testimonials__pager-link::before {
     content: "";
-    width: 0.75rem;
-    height: 0.75rem;
-    border: 2px solid var(--color-espresso);
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
+    background-color: var(--color-sand);
     transition: background-color var(--transition);
+  }
+
+  .testimonials__pager-link--current::before {
+    background-color: var(--color-espresso);
   }
 
   @media (hover: hover) {
     .testimonials__pager-link:hover::before {
-      background-color: var(--color-espresso);
+      background-color: var(--color-muted);
     }
   }
 

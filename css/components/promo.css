@@ -62,5 +62,14 @@
     .promo__img--hand {
       width: min(32.5rem, 27vw);
     }
+
+    /* Como en el Figma: bloque alineado a la izquierda, pegado a la mano */
+    .promo__inner {
+      width: auto;
+      margin-inline: calc(min(32.5rem, 27vw) + 5.5rem) 0;
+      justify-self: start;
+      justify-items: start;
+      text-align: start;
+    }
   }
 }
