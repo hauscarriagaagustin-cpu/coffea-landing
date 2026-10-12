@@ -1,0 +1,91 @@
+/* Orden de la cascada: se declara una sola vez, en el primer CSS que se carga. */
+@layer tokens, base, layout, components, utilities;
+
+/* ==========================================================================
+   Design tokens — Coffea (PRD sección 4). Único lugar con valores crudos.
+   ========================================================================== */
+@layer tokens {
+  :root {
+    /* Colores */
+    --color-espresso: #30261c;
+    --color-maroon: #2a0000;
+    --color-sand: #e2d9c8;
+    --color-sand-20: rgba(226, 217, 200, 0.2);
+    --color-sand-40: rgba(226, 217, 200, 0.4);
+    --color-bg: #f1f0ee;
+    --color-muted: #544a3e;
+    --color-border-soft: rgba(48, 38, 28, 0.1);
+    --color-text-soft: rgba(48, 38, 28, 0.7);
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-star: #ffb921; /* extraído del Figma */
+    --color-star-empty: #cecece;
+    --color-error: #b3261e;
+    --color-overlay: rgba(20, 14, 8, 0.62);
+    --color-scrim: rgba(48, 38, 28, 0.45);
+    --color-shadow: rgba(48, 38, 28, 0.16);
+
+    /* Tipografía: familias */
+    --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+    --font-body: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-ui: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-accent: "Reggae One", "Playfair Display", Georgia, serif;
+
+    /* Tipografía: escala (desktop; los títulos grandes son fluidos) */
+    --fs-hero: clamp(2.5rem, 1.5rem + 3.5vw, 4.5rem); /* 72 px */
+    --lh-hero: 1.139; /* 82 / 72 */
+    --fs-h2: clamp(1.5rem, 1.2rem + 1vw, 2rem); /* 32 px */
+    --tracking-h2: 0.04em; /* 1.28 px sobre 32 px */
+    --fs-cta: clamp(1.75rem, 1.2rem + 1.8vw, 2.5rem); /* 40 px */
+    --lh-cta: 1.25; /* 50 / 40 */
+    --fs-card-title: 2.375rem; /* 38 px */
+    --fs-logo: 2rem; /* 32 px */
+    --fs-footer-h: 1.5rem; /* 24 px */
+    --fs-lg: 1.25rem; /* 20 px */
+    --tracking-lg: 0.2em; /* 4 px sobre 20 px */
+    --fs-md: 1.125rem; /* 18 px */
+    --lh-md: 1.444; /* 26 / 18 */
+    --fs-base: 1rem; /* 16 px */
+    --fs-sm: 0.875rem; /* 14 px */
+    --fs-xs: 0.75rem; /* 12 px */
+    --lh-xs: 1.667; /* 20 / 12 */
+    --lh-desc: 1.4; /* 28 / 20 */
+
+    /* Forma */
+    --radius-pill: 100px;
+    --radius-card: 18px;
+    --radius-img: 12px;
+    --radius-btn: 8px;
+    --container: 1444px;
+
+    /* Espaciado (escala observada en el diseño, en px) */
+    --space-4: 0.25rem;
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-28: 1.75rem;
+    --space-40: 2.5rem;
+    --space-56: 3.5rem;
+    --space-64: 4rem;
+
+    /* Layout responsive */
+    --gutter: 1rem;
+    --tap: 2.75rem; /* área táctil mínima 44 px */
+
+    /* Movimiento */
+    --transition: 200ms ease;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --gutter: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :root {
+      --gutter: 3rem;
+    }
+  }
+}

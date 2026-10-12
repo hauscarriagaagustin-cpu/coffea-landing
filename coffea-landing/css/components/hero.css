@@ -1,0 +1,87 @@
+@layer components {
+  .hero {
+    --focus-color: var(--color-white);
+    position: relative;
+    display: flex;
+    min-height: 40rem; /* ≈ 640 px en mobile */
+    overflow: hidden;
+    background-color: var(--color-espresso);
+    color: var(--color-white);
+  }
+
+  .hero picture,
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  /* Overlay oscuro para mantener contraste AA del texto sobre la foto */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--color-overlay);
+  }
+
+  .hero__inner {
+    position: relative;
+    z-index: 1;
+    padding-block-start: clamp(7.5rem, 15.3vw, 18.375rem); /* 294 px a 1920 */
+    padding-block-end: var(--space-56);
+  }
+
+  .hero__content {
+    max-width: 34.8125rem; /* 557 px */
+  }
+
+  .hero__eyebrow {
+    margin-block-end: var(--space-24);
+    font-family: var(--font-body);
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    letter-spacing: var(--tracking-lg);
+    text-transform: uppercase;
+  }
+
+  .hero__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-hero);
+    font-weight: 700;
+    line-height: var(--lh-hero);
+  }
+
+  .hero__text {
+    max-width: 26.9375rem; /* 431 px */
+    margin-block: var(--space-40) var(--space-40);
+    font-size: var(--fs-md);
+    line-height: var(--lh-md);
+  }
+
+  @media (min-width: 768px) {
+    .hero {
+      min-height: 46rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      min-height: min(100vh, 62.5rem); /* 100vh con tope en 1000 px */
+    }
+
+    .hero::after {
+      background: linear-gradient(90deg, var(--color-overlay) 0%, var(--color-overlay) 35%, transparent 85%);
+    }
+
+    .hero__eyebrow {
+      margin-block-end: var(--space-40);
+    }
+
+    .hero__text {
+      margin-block: var(--space-56) var(--space-56);
+    }
+  }
+}

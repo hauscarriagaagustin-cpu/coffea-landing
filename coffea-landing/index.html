@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffea — The richest coffee in the city</title>
+  <meta name="description" content="Coffea is a coffee shop serving freshly roasted coffee and homemade desserts. Order your favourite cup today.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coffea — The richest coffee in the city">
+  <meta property="og:description" content="Coffea is a coffee shop serving freshly roasted coffee and homemade desserts. Order your favourite cup today.">
+  <meta name="theme-color" content="#30261c">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="assets/img/hero-768.avif 768w, assets/img/hero-1280.avif 1280w, assets/img/hero-1920.avif 1920w" imagesizes="(min-width: 1024px) 100vw, 1280px" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&amp;family=Playfair+Display:wght@500;600;700&amp;family=Poppins:wght@400;500;600&amp;family=Reggae+One&amp;display=swap">
+  <link rel="stylesheet" href="css/tokens.css?v=6">
+  <link rel="stylesheet" href="css/base.css?v=6">
+  <link rel="stylesheet" href="css/layout.css?v=6">
+  <link rel="stylesheet" href="css/components/header.css?v=6">
+  <link rel="stylesheet" href="css/components/hero.css?v=6">
+  <link rel="stylesheet" href="css/components/categories.css?v=6">
+  <link rel="stylesheet" href="css/components/product-card.css?v=6">
+  <link rel="stylesheet" href="css/components/carousel.css?v=6">
+  <link rel="stylesheet" href="css/components/promo.css?v=6">
+  <link rel="stylesheet" href="css/components/testimonial-card.css?v=6">
+  <link rel="stylesheet" href="css/components/newsletter.css?v=6">
+  <link rel="stylesheet" href="css/components/footer.css?v=6">
+  <link rel="stylesheet" href="css/utilities.css?v=6">
+</head>
+<body>
+  <a class="skip-link" href="#main" lang="es">Saltar al contenido</a>
+  <header class="header">
+    <div class="header__inner container">
+      <a class="header__logo" href="/">coffea</a>
+      <nav class="header__nav" id="menu" aria-label="Principal">
+        <ul class="header__list">
+          <li><a class="header__link" href="#">home</a></li>
+          <li><a class="header__link" href="#">coffee</a></li>
+          <li><a class="header__link" href="#">bakery</a></li>
+          <li><a class="header__link" href="#">shop</a></li>
+          <li><a class="header__link" href="#">about</a></li>
+          <li><a class="header__link header__link--strong" href="#">login</a></li>
+        </ul>
+      </nav>
+      <button class="header__search" type="button" aria-label="Buscar">
+        <img src="assets/icons/search.svg" alt="" width="61" height="61">
+      </button>
+      <input class="header__toggle" type="checkbox" id="menu-toggle" aria-label="Abrir menú" aria-controls="menu">
+      <span class="header__burger" aria-hidden="true"><span class="header__burger-bar"></span></span>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <picture>
+        <source type="image/avif" srcset="assets/img/hero-768.avif 768w, assets/img/hero-1280.avif 1280w, assets/img/hero-1920.avif 1920w" sizes="(min-width: 1024px) 100vw, 1280px">
+        <source type="image/webp" srcset="assets/img/hero-768.webp 768w, assets/img/hero-1280.webp 1280w, assets/img/hero-1920.webp 1920w" sizes="(min-width: 1024px) 100vw, 1280px">
+        <img class="hero__bg" src="assets/img/hero-1920.jpg" srcset="assets/img/hero-768.jpg 768w, assets/img/hero-1280.jpg 1280w, assets/img/hero-1920.jpg 1920w" sizes="(min-width: 1024px) 100vw, 1280px" alt="" width="1920" height="1000" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Welcome</p>
+          <h1 class="hero__title" id="hero-title">We serve the richest coffee in the city!</h1>
+          <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+          <a class="btn btn--light" href="#coffee">Order Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories" aria-label="Categorías">
+      <ul class="categories__list">
+        <li><a class="categories__link" href="#coffee">
+          <svg class="categories__icon" viewBox="0 0 145 145" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" transform="translate(0.0 5.0)" d="M2.2,132.8C0.4,131.0 0.7,127.5 2.8,125.7C4.2,124.4 6.6,124.0 12.9,124.0L21.2,124.0L16.6,118.8C10.7,112.1 4.5,100.1 2.5,91.9C0.6,83.7 0.3,45.1 2.2,43.2C3.8,41.6 121.6,41.5 127.1,43.0C131.8,44.3 139.5,51.1 142.3,56.4C145.5,62.3 145.5,77.6 142.3,83.5C138.9,89.9 132.2,95.5 126.0,97.1C121.2,98.3 120.6,98.8 118.9,102.8C116.7,107.9 112.0,114.9 107.2,120.2L103.8,124.0L112.3,124.0C118.7,124.0 121.2,124.4 122.4,125.6C124.3,127.4 124.5,131.1 122.8,132.8C121.1,134.5 3.9,134.5 2.2,132.8ZM128.5,84.8C136.5,78.5 137.0,63.8 129.5,56.3C124.2,51.0 124.0,51.3 124.0,70.0C124.0,79.3 124.4,87.0 124.9,87.0C125.3,87.0 127.0,86.0 128.5,84.8ZM38.2,29.8C36.5,28.1 36.5,3.9 38.2,2.2C38.9,1.5 40.6,1.0 42.0,1.0C46.5,1.0 47.0,2.5 47.0,16.0C47.0,29.5 46.5,31.0 42.0,31.0C40.6,31.0 38.9,30.5 38.2,29.8ZM58.6,28.8C57.4,27.1 57.0,23.9 57.0,16.0C57.0,4.3 58.2,1.0 62.5,1.0C67.2,1.0 68.0,3.1 68.0,15.9C68.0,26.1 67.7,27.9 66.2,29.3C63.6,31.6 60.4,31.4 58.6,28.8ZM79.0,29.1C78.5,28.0 78.0,22.1 78.0,16.0C78.0,9.9 78.5,4.0 79.0,2.9C80.2,0.7 84.9,0.3 86.8,2.2C88.5,3.9 88.5,28.1 86.8,29.8C84.9,31.7 80.2,31.3 79.0,29.1Z"/></svg>
+          Hot Coffee</a></li>
+        <li><a class="categories__link" href="#coffee">
+          <svg class="categories__icon" viewBox="0 0 129 129" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" transform="translate(9.5 0.0)" d="M24.9,127.8C24.8,127.6 23.4,120.5 21.6,112.0L18.4,96.5L15.2,96.2C12.9,96.0 11.9,95.3 11.5,93.7C11.2,92.5 9.0,82.8 6.6,72.2L2.3,53.0L5.6,53.0C9.7,53.0 9.7,52.8 7.0,39.5C5.9,34.2 5.0,29.6 5.0,29.4C5.0,29.2 3.9,29.0 2.5,29.0C0.1,29.0 -0.0,28.8 -0.0,22.5L-0.0,16.1L6.2,15.8L12.5,15.5L16.5,8.3L20.5,1.0L54.7,1.0L88.9,1.0L93.1,8.5L97.2,16.0L103.6,16.0L110.0,16.0L110.0,22.5C110.0,28.7 109.9,29.0 107.6,29.0C104.8,29.0 104.8,29.1 102.5,41.0C101.6,45.7 100.6,50.3 100.4,51.3C100.0,52.7 100.5,53.0 103.5,53.0C106.6,53.0 107.2,53.3 106.8,54.8C106.5,55.7 104.4,65.4 102.0,76.2L97.6,95.9L94.6,96.2L91.5,96.5L88.3,112.0C86.5,120.5 85.1,127.6 85.0,127.8C85.0,127.9 71.5,128.0 55.0,128.0C38.5,128.0 25.0,127.9 24.9,127.8ZM93.5,89.8C93.8,88.5 95.4,81.4 97.0,74.0C98.7,66.6 100.3,59.7 100.6,58.8C101.1,57.1 98.5,57.0 55.1,57.0C29.7,57.0 9.0,57.2 9.0,57.5C9.0,58.7 16.3,90.5 16.7,91.2C16.9,91.7 34.2,92.0 55.0,92.0L93.0,92.0L93.5,89.8ZM104.8,22.2L105.1,20.0L55.6,20.0L6.0,20.0L6.0,22.5L6.0,25.0L55.2,24.8L104.5,24.5L104.8,22.2ZM90.0,14.2C90.0,13.8 89.0,11.6 87.8,9.2L85.5,5.0L54.8,5.0L24.0,5.0L22.0,9.0C20.9,11.1 20.0,13.4 20.0,14.0C20.0,14.7 31.4,15.0 55.0,15.0C74.2,15.0 90.0,14.7 90.0,14.2Z"/></svg>
+          Cold Coffee</a></li>
+        <li><a class="categories__link" href="#coffee">
+          <svg class="categories__icon" viewBox="0 0 123 123" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" transform="translate(0.0 0.5)" d="M21.0,118.8C20.1,116.6 13.0,79.9 13.0,77.2C13.0,76.3 23.4,76.0 61.5,76.0C88.2,76.0 110.0,76.3 110.0,76.7C110.0,78.8 102.7,116.9 102.0,118.8L101.0,121.0L61.5,121.0L22.0,121.0L21.0,118.8ZM7.3,64.3C1.6,63.2 -0.0,59.9 0.0,49.0C0.0,37.5 0.8,35.4 5.5,33.4C9.6,31.7 112.0,31.3 116.4,33.0C122.2,35.1 123.0,37.1 123.0,48.3C123.0,59.6 122.1,61.5 115.7,63.9C113.0,65.0 12.5,65.3 7.3,64.3ZM17.0,11.0L22.0,1.0L61.6,1.0L101.1,1.0L105.6,10.4C108.0,15.5 110.0,20.0 110.0,20.4C110.0,20.7 87.9,21.0 61.0,21.0L12.0,21.0L17.0,11.0Z"/></svg>
+          Cup Coffee</a></li>
+        <li><a class="categories__link" href="#dessert">
+          <svg class="categories__icon" viewBox="0 0 138 138" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" transform="translate(0.0 7.0)" d="M7.2,122.0C-0.0,117.6 0.0,117.8 0.0,76.5C0.0,36.4 0.3,34.0 5.3,28.3C11.2,21.6 13.6,21.0 39.2,21.0L62.0,21.0L62.0,11.0L62.0,1.0L68.5,1.0L75.0,1.0L75.0,11.0L75.0,21.0L97.8,21.0C124.2,21.0 127.9,22.0 133.6,30.2L136.5,34.3L136.8,74.2C137.1,113.0 137.0,114.3 135.0,117.5C130.9,124.2 132.5,124.0 68.3,124.0C12.4,124.0 10.4,123.9 7.2,122.0ZM124.0,94.0C124.0,85.2 123.8,78.0 123.6,78.0C123.4,78.0 121.2,79.6 118.8,81.7C106.6,92.0 91.9,92.0 80.4,81.8C75.2,77.1 72.9,76.0 68.2,76.0C64.5,76.0 57.4,79.9 55.5,83.0C53.7,85.9 44.4,89.3 38.0,89.3C30.2,89.3 25.6,87.6 18.9,81.9L14.0,77.8L14.0,93.9L14.0,110.0L69.0,110.0L124.0,110.0L124.0,94.0ZM46.5,72.4C62.4,59.6 74.3,58.9 87.4,69.9C96.6,77.7 102.2,77.9 110.6,70.7C113.4,68.4 117.5,65.6 119.9,64.6L124.2,62.6L123.8,50.9C123.3,33.2 129.6,35.0 68.4,35.0L17.1,35.0L15.6,37.2C14.4,38.9 14.0,42.2 14.0,51.2L14.0,63.0L16.8,64.1C18.3,64.7 22.0,67.0 25.0,69.4C35.0,77.2 39.8,77.9 46.5,72.4Z"/></svg>
+          Dessert</a></li>
+      </ul>
+    </section>
+
+    <section class="products" aria-labelledby="coffee-title" id="coffee">
+      <h2 class="section-title products__title" id="coffee-title">Our Special Coffee</h2>
+      <div class="carousel">
+        <span class="carousel__arrow carousel__arrow--prev" aria-hidden="true"></span>
+        <ul class="carousel__track">
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/coffee-1-334.avif 334w, assets/img/coffee-1-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/coffee-1-334.webp 334w, assets/img/coffee-1-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/coffee-1-334.jpg" srcset="assets/img/coffee-1-334.jpg 334w, assets/img/coffee-1-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Espresso in a white cup on a light blue saucer" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-1" aria-label="Marcar Espresso como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Espresso</h3>
+              <p class="product-card__desc">Short, bold and creamy.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/coffee-2-334.avif 334w, assets/img/coffee-2-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/coffee-2-334.webp 334w, assets/img/coffee-2-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/coffee-2-334.jpg" srcset="assets/img/coffee-2-334.jpg 334w, assets/img/coffee-2-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Black coffee in a white cup on a wooden tray with green leaves" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-2" aria-label="Marcar Americano como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Americano</h3>
+              <p class="product-card__desc">Espresso and hot water.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/coffee-3-334.avif 334w, assets/img/coffee-3-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/coffee-3-334.webp 334w, assets/img/coffee-3-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/coffee-3-334.jpg" srcset="assets/img/coffee-3-334.jpg 334w, assets/img/coffee-3-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Cappuccino with a heart of milk foam in a brown cup on a wooden table" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-3" aria-label="Marcar Cappuccino como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Cappuccino</h3>
+              <p class="product-card__desc">Espresso, milk and foam.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/coffee-4-334.avif 334w, assets/img/coffee-4-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/coffee-4-334.webp 334w, assets/img/coffee-4-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/coffee-4-334.jpg" srcset="assets/img/coffee-4-334.jpg 334w, assets/img/coffee-4-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Coffee with latte art in a white cup and saucer on a dark table" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-coffee-4" aria-label="Marcar Flat white como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Flat white</h3>
+              <p class="product-card__desc">Silky milk, double shot.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <span class="carousel__arrow carousel__arrow--next" aria-hidden="true"></span>
+      </div>
+    </section>
+    <section class="products" aria-labelledby="dessert-title" id="dessert">
+      <h2 class="section-title products__title" id="dessert-title">Our Special Dessert</h2>
+      <div class="carousel">
+        <span class="carousel__arrow carousel__arrow--prev" aria-hidden="true"></span>
+        <ul class="carousel__track">
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/dessert-1-334.avif 334w, assets/img/dessert-1-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/dessert-1-334.webp 334w, assets/img/dessert-1-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/dessert-1-334.jpg" srcset="assets/img/dessert-1-334.jpg 334w, assets/img/dessert-1-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Two cups of latte art coffee on a wooden stool among green leaves" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-1" aria-label="Marcar Chocolate donut como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Chocolate donut</h3>
+              <p class="product-card__desc">Dark chocolate glaze.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/dessert-2-334.avif 334w, assets/img/dessert-2-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/dessert-2-334.webp 334w, assets/img/dessert-2-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/dessert-2-334.jpg" srcset="assets/img/dessert-2-334.jpg 334w, assets/img/dessert-2-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Top view of a latte art coffee on a round weathered wooden stool" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-2" aria-label="Marcar Vanilla cupcake como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Vanilla cupcake</h3>
+              <p class="product-card__desc">Vanilla cream topping.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/dessert-3-334.avif 334w, assets/img/dessert-3-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/dessert-3-334.webp 334w, assets/img/dessert-3-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/dessert-3-334.jpg" srcset="assets/img/dessert-3-334.jpg 334w, assets/img/dessert-3-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Top view of a latte art coffee on a dark starry background" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-3" aria-label="Marcar Strawberry cake como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Strawberry cake</h3>
+              <p class="product-card__desc">Cream and strawberries.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+          <li class="carousel__item">
+            <article class="product-card">
+              <div class="product-card__media">
+                <picture>
+                  <source type="image/avif" srcset="assets/img/dessert-4-334.avif 334w, assets/img/dessert-4-668.avif 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <source type="image/webp" srcset="assets/img/dessert-4-334.webp 334w, assets/img/dessert-4-668.webp 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw">
+                  <img class="product-card__img" src="assets/img/dessert-4-334.jpg" srcset="assets/img/dessert-4-334.jpg 334w, assets/img/dessert-4-668.jpg 668w" sizes="(min-width: 1440px) 334px, (min-width: 1024px) 22vw, (min-width: 768px) 40vw, 82vw" alt="Cup of latte with a leaf pattern on a table in warm sunlight" width="334" height="364" loading="lazy" decoding="async">
+                </picture>
+                <input class="product-card__fav-input" type="checkbox" id="fav-dessert-4" aria-label="Marcar Macaron box como favorito">
+                <span class="product-card__fav" aria-hidden="true"></span>
+              </div>
+              <h3 class="product-card__title">Macaron box</h3>
+              <p class="product-card__desc">Crisp, creamy shells.</p>
+              <div class="product-card__footer">
+                <data class="product-card__price" value="200">Rs. 200</data>
+                <button class="product-card__btn" type="button">Order Now</button>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <span class="carousel__arrow carousel__arrow--next" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="promo" aria-labelledby="promo-title">
+      <picture>
+        <source type="image/avif" srcset="assets/img/promo-hand-520.avif 520w, assets/img/promo-hand-1041.avif 1041w" sizes="(min-width: 1024px) 27vw, 22vw">
+        <source type="image/webp" srcset="assets/img/promo-hand-520.webp 520w, assets/img/promo-hand-1041.webp 1041w" sizes="(min-width: 1024px) 27vw, 22vw">
+        <img class="promo__img promo__img--hand" src="assets/img/promo-hand-520.jpg" srcset="assets/img/promo-hand-520.jpg 520w, assets/img/promo-hand-1041.jpg 1041w" sizes="(min-width: 1024px) 27vw, 22vw" alt="" width="520" height="335" loading="lazy" decoding="async">
+      </picture>
+      <div class="promo__inner container">
+        <h2 class="promo__title" id="promo-title">Check Out Our Best Coffee Beans</h2>
+        <a class="btn btn--dark" href="#coffee">Explore Our Products <span class="btn__icon" aria-hidden="true"></span></a>
+      </div>
+      <picture>
+        <source type="image/avif" srcset="assets/img/promo-beans-503.avif 503w, assets/img/promo-beans-1005.avif 1005w" sizes="26vw">
+        <source type="image/webp" srcset="assets/img/promo-beans-503.webp 503w, assets/img/promo-beans-1005.webp 1005w" sizes="26vw">
+        <img class="promo__img promo__img--beans" src="assets/img/promo-beans-503.jpg" srcset="assets/img/promo-beans-503.jpg 503w, assets/img/promo-beans-1005.jpg 1005w" sizes="26vw" alt="" width="503" height="335" loading="lazy" decoding="async">
+      </picture>
+    </section>
+
+    <section class="testimonials" aria-labelledby="testimonials-title">
+      <h2 class="testimonials__title" id="testimonials-title">
+        <span class="testimonials__eyebrow">Come and Join</span>
+        <span class="testimonials__heading">Our Happy Customers</span>
+      </h2>
+      <ul class="testimonials__list">
+          <li class="testimonials__item" id="t-1">
+            <figure class="testimonial-card">
+              <figcaption class="testimonial-card__caption">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/avatar-1.webp">
+                  <img class="testimonial-card__avatar" src="assets/img/avatar-1.jpg" alt="" width="56" height="56" loading="lazy" decoding="async">
+                </picture>
+                <span>
+                  <span class="testimonial-card__name">James Smith</span>
+                  <span class="testimonial-card__role">Entrepreneur</span>
+                </span>
+                <span class="testimonial-card__rating testimonial-card__rating--3" role="img" aria-label="3 de 5 estrellas"></span>
+              </figcaption>
+              <blockquote class="testimonial-card__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+            </figure>
+          </li>
+          <li class="testimonials__item testimonials__item--featured" id="t-2">
+            <figure class="testimonial-card">
+              <figcaption class="testimonial-card__caption">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/avatar-1.webp">
+                  <img class="testimonial-card__avatar" src="assets/img/avatar-1.jpg" alt="" width="56" height="56" loading="lazy" decoding="async">
+                </picture>
+                <span>
+                  <span class="testimonial-card__name">James Smith</span>
+                  <span class="testimonial-card__role">Entrepreneur</span>
+                </span>
+                <span class="testimonial-card__rating testimonial-card__rating--5" role="img" aria-label="5 de 5 estrellas"></span>
+              </figcaption>
+              <blockquote class="testimonial-card__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+            </figure>
+          </li>
+          <li class="testimonials__item" id="t-3">
+            <figure class="testimonial-card">
+              <figcaption class="testimonial-card__caption">
+                <picture>
+                  <source type="image/webp" srcset="assets/img/avatar-1.webp">
+                  <img class="testimonial-card__avatar" src="assets/img/avatar-1.jpg" alt="" width="56" height="56" loading="lazy" decoding="async">
+                </picture>
+                <span>
+                  <span class="testimonial-card__name">James Smith</span>
+                  <span class="testimonial-card__role">Entrepreneur</span>
+                </span>
+                <span class="testimonial-card__rating testimonial-card__rating--4" role="img" aria-label="4 de 5 estrellas"></span>
+              </figcaption>
+              <blockquote class="testimonial-card__text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></blockquote>
+            </figure>
+          </li>
+      </ul>
+      <nav class="testimonials__pager" aria-label="Testimonios">
+        <a class="testimonials__pager-link" href="#t-1"><span class="visually-hidden" lang="es">Testimonio 1</span></a>
+        <a class="testimonials__pager-link" href="#t-2"><span class="visually-hidden" lang="es">Testimonio 2</span></a>
+        <a class="testimonials__pager-link" href="#t-3"><span class="visually-hidden" lang="es">Testimonio 3</span></a>
+      </nav>
+    </section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title">
+      <picture>
+        <source type="image/avif" srcset="assets/img/newsletter-beans-215.avif 215w, assets/img/newsletter-beans-430.avif 430w" sizes="215px">
+        <source type="image/webp" srcset="assets/img/newsletter-beans-215.webp 215w, assets/img/newsletter-beans-430.webp 430w" sizes="215px">
+        <img class="newsletter__img newsletter__img--left" src="assets/img/newsletter-beans-215.jpg" srcset="assets/img/newsletter-beans-215.jpg 215w, assets/img/newsletter-beans-430.jpg 430w" sizes="215px" alt="" width="215" height="321" loading="lazy" decoding="async">
+      </picture>
+      <div class="newsletter__inner container">
+        <h2 class="newsletter__title" id="newsletter-title">Join in and get 15% off!</h2>
+        <p class="newsletter__subtitle">Subscribe to our newsletter and get 15% off discount code.</p>
+        <form class="newsletter__form" action="#" method="post">
+          <label class="visually-hidden" for="newsletter-email" lang="es">Correo electrónico</label>
+          <input class="newsletter__field" id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="Email address">
+          <button class="btn btn--dark newsletter__submit" type="submit">Subscribe</button>
+        </form>
+      </div>
+      <picture>
+        <source type="image/avif" srcset="assets/img/newsletter-beans-215.avif 215w, assets/img/newsletter-beans-430.avif 430w" sizes="215px">
+        <source type="image/webp" srcset="assets/img/newsletter-beans-215.webp 215w, assets/img/newsletter-beans-430.webp 430w" sizes="215px">
+        <img class="newsletter__img newsletter__img--right" src="assets/img/newsletter-beans-215.jpg" srcset="assets/img/newsletter-beans-215.jpg 215w, assets/img/newsletter-beans-430.jpg 430w" sizes="215px" alt="" width="215" height="321" loading="lazy" decoding="async">
+      </picture>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <a class="footer__brand" href="/">Coffea</a>
+        <nav class="footer__col" aria-labelledby="footer-h-0">
+          <h3 class="footer__heading" id="footer-h-0">PRIVACY</h3>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">Terms of use</a></li>
+            <li><a class="footer__link" href="#">Privacy policy</a></li>
+            <li><a class="footer__link" href="#">Cookies</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footer-h-1">
+          <h3 class="footer__heading" id="footer-h-1">SERVICES</h3>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">Shop</a></li>
+            <li><a class="footer__link" href="#">Order ahead</a></li>
+            <li><a class="footer__link" href="#">Menu</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footer-h-2">
+          <h3 class="footer__heading" id="footer-h-2">ABOUT US</h3>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">Find a location</a></li>
+            <li><a class="footer__link" href="#">About us</a></li>
+            <li><a class="footer__link" href="#">Our story</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footer-h-3">
+          <h3 class="footer__heading" id="footer-h-3">INFORMATION</h3>
+          <ul class="footer__list">
+            <li><a class="footer__link" href="#">Plans &amp; pricing</a></li>
+            <li><a class="footer__link" href="#">Sell your products</a></li>
+            <li><a class="footer__link" href="#">Jobs</a></li>
+          </ul>
+        </nav>
+      <div class="footer__social">
+        <h3 class="footer__heading" id="footer-h-social">SOCIAL MEDIA</h3>
+        <ul class="footer__social-list" aria-labelledby="footer-h-social">
+            <li><a class="footer__social-link" href="#" aria-label="X (Twitter)"><img src="assets/icons/social-x.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+            <li><a class="footer__social-link" href="#" aria-label="Instagram"><img src="assets/icons/social-instagram.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+            <li><a class="footer__social-link" href="#" aria-label="Facebook"><img src="assets/icons/social-facebook.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+            <li><a class="footer__social-link" href="#" aria-label="LinkedIn"><img src="assets/icons/social-linkedin.svg" alt="" width="24" height="24" loading="lazy"></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

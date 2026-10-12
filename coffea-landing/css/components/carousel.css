@@ -1,0 +1,103 @@
+@layer components {
+  .products {
+    padding-block: var(--space-28) var(--space-40);
+    background-color: var(--color-bg);
+  }
+
+  .products__title {
+    margin-block-end: var(--space-40);
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  /* Carrusel nativo: scroll horizontal + scroll-snap, sin JavaScript */
+  .carousel__track {
+    display: flex;
+    gap: var(--space-4);
+    padding-inline: var(--gutter);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+  }
+
+  .carousel__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel__item {
+    flex: 0 0 82%; /* mobile: se asoma la siguiente card */
+    scroll-snap-align: start;
+  }
+
+  .carousel__arrow {
+    display: none;
+    position: absolute;
+    inset-block-start: 50%;
+    z-index: 2;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: url("../../assets/icons/arrow.svg") center / contain no-repeat;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* decorativas: en desktop las 4 cards ya son visibles */
+  }
+
+  .carousel__arrow--prev {
+    inset-inline-start: var(--space-8);
+    scale: -1 1;
+  }
+
+  .carousel__arrow--next {
+    inset-inline-end: var(--space-8);
+  }
+
+  @media (min-width: 768px) {
+    .carousel__item {
+      flex-basis: calc((100% - 1.5 * var(--space-4)) / 2.5); /* 2,5 cards */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .products {
+      padding-block-start: var(--space-28);
+    }
+
+    .products__title {
+      margin-block-end: var(--space-64);
+    }
+
+    .carousel__track {
+      width: min(100% - 9rem, 92.25rem); /* 1476 px */
+      margin-inline: auto;
+      padding-inline: 0;
+    }
+
+    .carousel__item {
+      flex-basis: calc((100% - 3 * var(--space-4)) / 4);
+    }
+
+    .carousel__arrow {
+      display: block;
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .carousel__arrow {
+      width: 4.4375rem; /* 71 px */
+      height: 4.4375rem;
+    }
+
+    .carousel__arrow--prev {
+      inset-inline-start: 5rem; /* 80 px */
+    }
+
+    .carousel__arrow--next {
+      inset-inline-end: 5rem;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@layer layout {
+  .container {
+    width: min(100% - 2 * var(--gutter), var(--container));
+    margin-inline: auto;
+  }
+
+  /* Título H2 de sección (Playfair 600, uppercase) */
+  .section-title {
+    font-family: var(--font-display);
+    font-size: var(--fs-h2);
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: var(--tracking-h2);
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-espresso);
+  }
+
+  /* Botón pill reutilizable (hero, CTA, newsletter) */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-12);
+    min-height: var(--tap);
+    border: 0;
+    border-radius: var(--radius-pill);
+    text-align: center;
+    transition:
+      background-color var(--transition),
+      transform var(--transition);
+  }
+
+  .btn--light {
+    padding: var(--space-16) var(--space-40);
+    background-color: var(--color-white);
+    color: var(--color-espresso);
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    font-weight: 500;
+  }
+
+  .btn--dark {
+    padding: var(--space-12) var(--space-28);
+    background-color: var(--color-espresso);
+    color: var(--color-bg);
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    font-weight: 500;
+  }
+
+  .btn__icon {
+    flex: none;
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url("../assets/icons/chevron.svg") center / contain no-repeat;
+  }
+
+  @media (hover: hover) {
+    .btn--light:hover {
+      background-color: var(--color-sand);
+      transform: translateY(-2px);
+    }
+
+    .btn--dark:hover {
+      background-color: var(--color-maroon);
+      transform: translateY(-2px);
+    }
+  }
+
+  /* Página 404 */
+  .not-found {
+    display: grid;
+    place-content: center;
+    gap: var(--space-16);
+    min-height: 50vh;
+    padding-block: var(--space-64);
+    text-align: center;
+  }
+}
